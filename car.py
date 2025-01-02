@@ -1,4 +1,4 @@
-df=pd.read_csv('/content/quikr_car.csv')
+df=pd.read_csv('quikr_car.csv')
 df.head()
 df.shape
 df.info()
