@@ -3,6 +3,5 @@ pandas
 numpy
 scikit-learn
 seaborn
-Linear Regression
 pickles
 matplotlib.pyplot
