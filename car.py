@@ -27,21 +27,6 @@ df=df.reset_index(drop=True)
 df.describe()
 df=df[df['Price']<6e6]
 df.to_csv('Cleaned_Car_data.csv')
-import seaborn as sns
-import matplotlib.pyplot as plt
-plt.subplots(figsize=(15,7))
-ax=sns.boxplot(x='company',y='Price',data=df)
-ax.set_xticklabels(ax.get_xticklabels(),rotation=40,ha='right')
-plt.show()
-plt.subplots(figsize=(20,10))
-ax=sns.swarmplot(x='year',y='Price',data=df)
-ax.set_xticklabels(ax.get_xticklabels(),rotation=40,ha='right')
-plt.show()
-sns.relplot(x='kms_driven',y='Price',data=df,height=7,aspect=1.5)
-plt.subplots(figsize=(14,7))
-sns.boxplot(x='fuel_type',y='Price',data=df)
-ax=sns.relplot(x='company',y='Price',data=df,hue='fuel_type',size='year',height=7,aspect=2)
-ax.set_xticklabels(rotation=40,ha='right')
 x=df.drop(columns='Price')
 y=df['Price']
 from sklearn.model_selection import train_test_split
