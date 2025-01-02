@@ -71,7 +71,6 @@ pipe.fit(x_train,y_train)
 y_pred=pipe.predict(x_test)
 r2_score(y_test,y_pred)
 import pickle
-!pip install pickle5
 pickle.dump(pipe,open('LinearRegressionModel.pkl','wb'))
 pipe.predict(pd.DataFrame([['Maruti Suzuki Swift','Maruti',2019,100,'Petrol']],columns=['name','company','year','kms_driven','fuel_type']))
 
