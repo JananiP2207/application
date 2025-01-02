@@ -1,4 +1,3 @@
-pip install streamlit
 df=pd.read_csv('/content/quikr_car.csv')
 df.head()
 df.shape
